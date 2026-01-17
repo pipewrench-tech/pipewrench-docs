@@ -2,6 +2,11 @@ site_name: Pipewrench Docs
 site_description: Documentation for Your Product
 site_url: https://docs.pipewrench.co.uk
 
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Overview: getting-started/overview.md
+
 theme:
   name: material
   features:
@@ -10,6 +15,15 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
   - admonition
