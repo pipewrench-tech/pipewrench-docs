@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Pipewrech Documentation & Knowledge Base
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

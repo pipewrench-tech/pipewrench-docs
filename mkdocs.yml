@@ -27,7 +27,7 @@ nav:
   - Invoices:
       - "Creating & Editing Invoices": invoices/new-edit-invoice.md
       - "Payments & Receipts": invoices/payments-receipts.md
-  - Image Library:
+  - Images:
       - Image Library: images/image-library.md
       - Creating Images: images/creating-images.md
   - Settings:
@@ -68,3 +68,5 @@ markdown_extensions:
       permalink: true
   - attr_list
   - def_list
+  - pymdownx.magiclink:
+      email_obfuscate: true
