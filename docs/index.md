@@ -3,8 +3,6 @@ hide:
   - navigation
 ---
 
-# Pipewrech Knowledge Base
-
 Our documentation is currently a work in progress. The train has left the station, but we're still laying some of the track!
 
 !!! info "Have a question or require additional support?"
@@ -15,7 +13,7 @@ Our documentation is currently a work in progress. The train has left the statio
 
 ---
 
-## Welcome to Pipewrech
+# Welcome to Pipewrech
 Pipewrech is designed to streamline your entire sales workflow—from the first customer contact to the final invoice payment. Use the guides below to master the platform.
 
 ### 🚀 Getting Started
