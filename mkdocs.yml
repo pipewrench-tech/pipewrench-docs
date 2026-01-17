@@ -6,6 +6,33 @@ nav:
   - Home: index.md
   - Getting Started:
       - Overview: getting-started/overview.md
+      - Onboarding: getting-started/onboarding.md
+      - Company Details: getting-started/company-details.md
+      - "Branding & Logos": getting-started/branding.md
+      - "Quickstart: New Customer -> Proposal": getting-started/quickstart.md
+  - Customers:
+      - Managing Customers: customers/managing-customers.md
+      - Importing Customers: customers/importing-customers.md
+      - Managing Customer Contacts: customers/managing-contacts.md
+      - Importing Contacts: customers/importing-contacts.md
+  - Items:
+      - "Product & Service Items": items/managing-items.md
+      - Importing Items: items/importing-items.md
+  - Quotes:
+      - "Creating & Editing Quotes": quotes/new-edit-quote.md
+      - Converting Quotes to Invoices: quotes/convert-quote-invoice.md
+  - Proposals:
+      - "Creating & Editing Proposals": proposals/new-edit-proposal.md
+      - AI Content Writer: proposals/ai-writer.md
+  - Invoices:
+      - "Creating & Editing Invoices": invoices/new-edit-invoice.md
+      - "Payments & Receipts": invoices/payments-receipts.md
+  - Image Library:
+      - Image Library: images/image-library.md
+      - Creating Images: images/creating-images.md
+  - Settings:
+      - Account Settings: settings/account.md
+      - "Subscription & Billing": settings/billing.md
 
 theme:
   name: material
