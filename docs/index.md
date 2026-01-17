@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Pipewrech Knowledge Base
 
 Our documentation is currently a work in progress. The train has left the station, but we're still laying some of the track!
@@ -37,3 +42,31 @@ Manage the foundation of your business.
 * [How to use the AI Content Writer](proposals/ai-writer.md)
 * [Importing your existing customer list](customers/importing-customers.md)
 * [Managing your Subscription](settings/billing.md)
+
+<div class="grid cards" markdown>
+
+-   :material-rocket-launch:{ .lg .middle } __Getting Started__
+
+    ---
+
+    New to Pipewrech? Start here to set up your profile.
+
+    [:octicons-arrow-right-24: Go to Onboarding](getting-started/onboarding.md)
+
+-   :material-account-group:{ .lg .middle } __Customers__
+
+    ---
+
+    Manage your leads and contacts.
+
+    [:octicons-arrow-right-24: Manage Customers](customers/managing-customers.md)
+
+-   :material-file-document-edit:{ .lg .middle } __Proposals__
+
+    ---
+
+    Learn how to use the AI Content Writer.
+    
+    [:octicons-arrow-right-24: Build a Proposal](proposals/new-edit-proposal.md)
+
+</div>

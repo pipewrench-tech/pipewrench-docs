@@ -5,7 +5,6 @@ site_url: https://docs.pipewrench.co.uk
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: getting-started/overview.md
       - Onboarding: getting-started/onboarding.md
       - Company Details: getting-started/company-details.md
       - "Branding & Logos": getting-started/branding.md
@@ -13,7 +12,7 @@ nav:
   - Customers:
       - Managing Customers: customers/managing-customers.md
       - Importing Customers: customers/importing-customers.md
-      - Managing Customer Contacts: customers/managing-contacts.md
+      - Managing Contacts: customers/managing-contacts.md
       - Importing Contacts: customers/importing-contacts.md
   - Items:
       - "Product & Service Items": items/managing-items.md
@@ -70,3 +69,15 @@ markdown_extensions:
   - attr_list
   - def_list
   - pymdownx.details
+  - pymdownx.extra
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  

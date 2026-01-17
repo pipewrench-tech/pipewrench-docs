@@ -1,30 +1,79 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
-  <style>
-    /* Target the announcement bar container */
-    .md-announce {
-      background-image: url("{{ base_url }}/assets/images/pw-docs-announcement.png");
-      background-size: cover;
-      background-position: center;
-      text-align: center; /* Centers the text */
-      font-size: 0.75rem;  /* Reduces font size (default is usually 0.8rem or 1.0rem) */
-      padding: 0.4rem;    /* Optional: adjusts height of the bar */
-    }
 
-    /* Ensure the link color stays readable against a background image */
-    .md-announce a {
-      color: inherit;
-      text-decoration: underline;
+{{ super() }}
+  <script>
+    // Check if ?inApp=true is in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('inApp')) {
+      // Add a class to the body so we can target elements with CSS
+      document.documentElement.classList.add('is-in-app');
+      
+      // Update the title text dynamically
+      window.addEventListener('DOMContentLoaded', () => {
+        const titleElement = document.querySelector('.md-header__title .md-ellipsis');
+        if (titleElement) {
+          titleElement.innerText = 'Documentation';
+        }
+      });
     }
-  </style>
+  </script>
+
+<style>
+  /* 1. Target the main container */
+  [data-md-component="announce"] {
+    background-image: url("{{ base_url }}/assets/images/pw-docs-announcement.png") !important;
+    background-size: cover;
+    background-position: center;
+    /* This removes that semi-transparent overlay */
+    background-color: transparent !important; 
+  }
+
+  /* 2. Remove any secondary background colors on the banner itself */
+  .md-banner {
+    background-color: hsl(225deg 15% 10% / 40%) !important;
+  }
+
+  /* 3. Target the inner container for font and centering */
+  .md-banner__inner {
+    text-align: center;
+    font-size: 0.65rem !important; /* Forced to override the inherited size */
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hide the break by default (Desktop) */
+    .mobile-break {
+    display: none;
+  }
+
+  /* Show the break on screens smaller than 768px (Mobile/Tablet) */
+    @media screen and (max-width: 768px) {
+    .mobile-break {
+    display: block;
+    content: "";
+    margin-top: 0.2rem; /* Adds a tiny bit of breathing room between lines */
+    }
+  }
+
+  /* When 'is-in-app' class is present, hide the logo and adjustment margins */
+    .is-in-app .md-logo {
+      display: none !important;
+    }
+    
+    /* Optional: If you also want to hide the search bar in-app to save space */
+    /* .is-in-app .md-search { display: none; } */
+
+</style>
 {% endblock %}
 
 {% block announce %}
   {% if page and page.meta and page.meta.announcement %}
     {{ page.meta.announcement }}
   {% else %}
-    Pipewrech is currently in Beta. Need help? 
-    Email <span style="direction: rtl; unicode-bidi: bidi-override;">ku.oc.hcernwepip@troppus</span>
+    Pipewrech is currently in Beta. <br class="mobile-break">
+    Need help? Email <span style="direction: rtl; unicode-bidi: bidi-override;">ku.oc.hcernwepip@troppus</span>
   {% endif %}
 {% endblock %}

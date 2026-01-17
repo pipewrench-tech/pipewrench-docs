@@ -1,1 +1,1 @@
-# Managing Customer Contacts
+# Managing Contacts
