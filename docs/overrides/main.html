@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <style>
+    /* Target the announcement bar container */
+    .md-announce {
+      background-image: url("{{ base_url }}/assets/images/pw-docs-announcement.png");
+      background-size: cover;
+      background-position: center;
+      text-align: center; /* Centers the text */
+      font-size: 0.75rem;  /* Reduces font size (default is usually 0.8rem or 1.0rem) */
+      padding: 0.4rem;    /* Optional: adjusts height of the bar */
+    }
+
+    /* Ensure the link color stays readable against a background image */
+    .md-announce a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  </style>
+{% endblock %}
+
+{% block announce %}
+  {% if page and page.meta and page.meta.announcement %}
+    {{ page.meta.announcement }}
+  {% else %}
+    Pipewrech is currently in Beta. Need help? 
+    Email <span style="direction: rtl; unicode-bidi: bidi-override;">ku.oc.hcernwepip@troppus</span>
+  {% endif %}
+{% endblock %}
